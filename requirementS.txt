@@ -1,0 +1,39 @@
+*** Caesar cipher ***
+
+Your task is to make a small program that breaks the code behind an encrypted
+text message. Here is one example:
+
+Zr Fqdfnq Rzlrz zvnjd nmd lnqmhmf eqnl tmdzrx cqdzlr gd entmc ghlrdke
+sqzmrenqldc hm ghr adc hmsn z fhfzmshb hmrdbs ...
+
+We know that the sender has used the Caesar cipher. You find a description of
+this old encryption method here: https://en.wikipedia.org/wiki/Caesar_cipher
+
+The encrypted message is found in a file. You shall break the code and write
+the decoded text to another filer. Big and small letters, spaces and
+characters shall be kept as in the input file. You can assume that the text is
+English. Accordingly, the only letters you have to care about a to z, no å, ä
+and ö.
+
+The code breaking should be done by brute force, i.e.\ to test all possible
+shifts and check which one that gives the best result. As help, you get a word
+list with one thousand common English words. The word list is also provided as
+a file. You shall loop all shifts and count the number of hits against the word
+list. The text can include words not found in the list, but the shift giving
+the highest number of hits should still be the correct one.
+
+As usual you get a number of tests that help you to implement the functions you
+need. The tests assume that you only use positive shifts, even for the
+decryption. This works as a text that is encrypted with a shift of 2 (a is
+encoded as c, z as b, ...) is decoded with a shift of 24. Note that there are
+26 letters in the English alphabet and a shift of 26 gives no encryption.
+
+If the input file holds the text above, then the text in the output file shall
+look like this:
+
+As Gregor Samsa awoke one morning from uneasy dreams he found himself
+transformed in his bed into a gigantic insect ...
+
+Can you see with what shift the text is encoded? And what shift was needed to
+decode?
+
